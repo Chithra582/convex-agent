@@ -1,0 +1,16 @@
+name: "convex-thread-manager"
+description: "Creates, resumes, and archives reactive chat threads with user and agent participant mappings."
+input_schema:
+  type: "object"
+  properties:
+    action:
+      type: "string"
+      description: "Thread lifecycle action (create, append_message, archive, get_history)."
+    thread_id:
+      type: "string"
+      description: "Unique identifier of the Convex thread."
+    message:
+      type: "object"
+      description: "Structured message payload including role and content."
+  required:
+    - "action"

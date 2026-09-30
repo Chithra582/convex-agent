@@ -1,0 +1,16 @@
+name: "hybrid-rag-query-executor"
+description: "Executes combined cosine vector similarity and keyword BM25 queries across stored document chunks."
+input_schema:
+  type: "object"
+  properties:
+    query_text:
+      type: "string"
+      description: "User query or search phrase."
+    limit:
+      type: "integer"
+      description: "Maximum number of relevant chunks to retrieve."
+    thread_id:
+      type: "string"
+      description: "Optional thread identifier for scoped historical retrieval."
+  required:
+    - "query_text"

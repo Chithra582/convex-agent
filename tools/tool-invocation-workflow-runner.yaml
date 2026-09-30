@@ -1,0 +1,17 @@
+name: "tool-invocation-workflow-runner"
+description: "Dispatches external tool calls with automatic retry, timeout, and schema validation."
+input_schema:
+  type: "object"
+  properties:
+    tool_name:
+      type: "string"
+      description: "Identifier of the registered tool to invoke."
+    arguments:
+      type: "object"
+      description: "Key-value dictionary matching the tool's input schema."
+    timeout_ms:
+      type: "integer"
+      description: "Execution timeout in milliseconds."
+  required:
+    - "tool_name"
+    - "arguments"
